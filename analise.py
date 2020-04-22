@@ -4,7 +4,7 @@ import base64
 
 def main():
     st.title('Analisando Dados')
-    st.image('python.jpg')
+    st.image('python.png')
     file = st.file_uploader('Choose your file :', type = 'csv')
     if file is not None:
         st.markdown('Selecione a quantidade de linhas para visualizar: ')
