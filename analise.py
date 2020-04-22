@@ -9,6 +9,7 @@ def main():
     if file is not None:
         slider = st.slider('Valores', 1, 1000)
         df = pd.read_csv(file)
+        st.markdown('Selecione a quantidade de linhas para visualizar: ')
         st.dataframe(df.head(slider))
         #st.markdown('Tabela')
         #st.table(df.head(slider))
