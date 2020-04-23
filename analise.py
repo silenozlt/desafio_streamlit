@@ -11,8 +11,8 @@ def main():
         slider = st.slider('Valores', 1, 1000)
         df = pd.read_csv(file)
         st.dataframe(df.head(slider))
-        #st.markdown('Tabela')
-        #st.table(df.head(slider))
+        st.markdown('Dados apresenteados formato tabela')
+        st.table(df.head(slider))
         st.markdown('As colunas existentes no dataset :')
         st.write(df.columns)
 
