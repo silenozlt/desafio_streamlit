@@ -13,7 +13,7 @@ def main():
         st.dataframe(df.head(slider))
         #st.markdown('Tabela')
         #st.table(df.head(slider))
-        #st.write(df.columns)
+        st.write(df.columns)
         #st.table(df.groupby('species')['petal_width'].mean())
 
 
