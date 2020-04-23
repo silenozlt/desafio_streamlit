@@ -15,10 +15,10 @@ def main():
         st.table(df.head(slider))
         st.markdown('As colunas existentes no dataset :')
         st.write(df.columns)
-        if st.button('Like'):
-            st.write('Obrigado pela visita')
-        else:
-            st.write('bye')
+    if st.button('Like'):
+        st.write('Obrigado pela visita')
+    else:
+        st.write('bye')
 
 
 
