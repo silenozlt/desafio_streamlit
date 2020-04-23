@@ -13,8 +13,8 @@ def main():
         st.dataframe(df.head(slider))
         #st.markdown('Tabela')
         #st.table(df.head(slider))
+        st.markdown('As colunas existentes no dataset :')
         st.write(df.columns)
-        #st.table(df.groupby('species')['petal_width'].mean())
 
 
 
