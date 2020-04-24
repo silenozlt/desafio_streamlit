@@ -31,10 +31,6 @@ def main():
 
 
 
-
-
-
-
     #if st.button('Like'):
     #    st.write('Obrigado pela visita')
     #else:
