@@ -1,6 +1,10 @@
 import streamlit as st
 import pandas as pd
 import base64
+import plotly as plt
+import seaborn as sns
+
+
 
 def main():
     st.title('Analisando Dados')
@@ -10,15 +14,31 @@ def main():
         st.markdown('Selecione a quantidade de linhas para visualizar: ')
         slider = st.slider('Valores', 1, 1000)
         df = pd.read_csv(file)
-        st.dataframe(df.head(slider))
-        st.markdown('Dados apresenteados formato tabela')
+        #st.dataframe(df.head(slider))
+        #st.markdown('Dados apresenteados formato tabela')
         st.table(df.head(slider))
-        st.markdown('As colunas existentes no dataset :')
+        st.markdown('Conhecendo as colunas do dataset :')
         st.write(df.columns)
-    if st.button('Like'):
-        st.write('Obrigado pela visita')
-    else:
-        st.write('bye')
+        st.markdown('Verificando a quantidade de linhas :')
+        st.write(len(df))
+        st.text('Verificando a correlação dos dados : ')
+        plt.figure(figsize=(16, 9))
+        sns.heatmap(df.corr(), annot=True, linewidths=0.5, linecolor='black', cmap='RdGy_r')
+        plt.xticks(rotation=90)
+        st.plotly_chart()
+        plt.show()
+
+
+
+
+
+
+
+
+    #if st.button('Like'):
+    #    st.write('Obrigado pela visita')
+    #else:
+    #    st.write('bye')
 
 
 
