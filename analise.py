@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import base64
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 import seaborn as sns
 
 
@@ -22,11 +22,11 @@ def main():
         st.markdown('Verificando a quantidade de linhas :')
         st.write(len(df))
         st.text('Verificando a correlação dos dados : ')
-        plt.figure(figsize=(16, 9))
+        st.pyplot.figure(figsize=(16, 9))
         sns.heatmap(df.corr(), annot=True, linewidths=0.5, linecolor='black', cmap='RdGy_r')
-        plt.xticks(rotation=90)
+        st.pyplot.xticks(rotation=90)
         st.plotly_chart()
-        plt.show()
+        st.pyplot.show()
 
 
 
