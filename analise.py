@@ -11,6 +11,7 @@ def main():
     st.image('imagens/python.png')
     file = st.file_uploader('Choose your file :', type = 'csv')
     if file is not None:
+        st.success('Carregado com sucesso !')
         st.markdown('Selecione a quantidade de linhas para visualizar: ')
         slider = st.slider('Valores', 1, 1000)
         df = pd.read_csv(file)
