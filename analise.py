@@ -22,7 +22,7 @@ def main():
         st.markdown('Verificando a quantidade de linhas :')
         st.write(len(df))
         st.text('Verificando a correlação dos dados : ')
-        st.pyplot.figure(figsize=(16, 9))
+        st.write(figsize=(16, 9))
         sns.heatmap(df.corr(), annot=True, linewidths=0.5, linecolor='black', cmap='RdGy_r')
         st.pyplot.xticks(rotation=90)
         st.plotly_chart()
