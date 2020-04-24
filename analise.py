@@ -25,10 +25,10 @@ def main():
 
 
 
-    #if st.button('Like'):
-    #    st.write('Obrigado pela visita')
-    #else:
-    #    st.write('bye')
+    if st.button('Like'):
+        st.write('Obrigado pela visita')
+    else:
+        st.warning('This is a warning')
 
 
 
