@@ -25,8 +25,8 @@ def main():
 
 
 
-    else:
-        st.warning('Ocorreu algum erro !')
+    if file is None:
+        st.warning("Ocorreu algum erro !")
 
     if st.button('Like'):
         st.write('Obrigado pela visita')
