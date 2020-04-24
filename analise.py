@@ -25,9 +25,6 @@ def main():
 
 
 
-    if file is None:
-        st.warning("Ocorreu algum erro !")
-
     if st.button('Like'):
         st.write('Obrigado pela visita')
     else:
