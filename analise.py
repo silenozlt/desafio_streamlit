@@ -25,7 +25,7 @@ def main():
         st.write(figsize=(16, 9))
         sns.heatmap(df.corr(), annot=True, linewidths=0.5, linecolor='black', cmap='RdGy_r')
         #st.pyplot.xticks(rotation=90)
-        st.plotly_chart()
+        #st.plotly_chart()
         st.pyplot.show()
 
 
