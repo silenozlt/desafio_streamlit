@@ -20,8 +20,14 @@ def main():
         st.markdown('Conhecendo as colunas do dataset :')
         st.write(df.columns)
         st.markdown('Verificando a quantidade de linhas :')
-        st.write(len(df))
-        st.sidebar.subheader('Visualização')
+        #st.write(len(df))
+
+
+        # AQUI TUDO QUE FOR FICAR DENTRO DO SIDEBAR
+        st.sidebar.subheader('Selecione como conhecer os dados:')
+        linhas = st.sidebar.checkbox('Linhas do dataset : ')
+        if linhas is not False:
+            st.write(len(df))
 
 
 
