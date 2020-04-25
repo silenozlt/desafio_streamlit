@@ -27,8 +27,12 @@ def main():
             st.write(len(df))
         colunas = st.sidebar.checkbox('Colunas : ')
         if colunas is not False:
-            st.markdown('Conhecendo as colunas do dataset :')
+            st.markdown('Conhecendo as colunas do Dataset :')
             st.write(df.columns)
+        tipo_var = st.sidebar.checkbox('Tipo de variaveis no Dataset')
+        if tipo_var is not False:
+            st.markdown('Tipos de variaveis :')
+            st.write(df.dtypes())
 
     if st.sidebar.button('Contatos'):
         st.write('GitHub: https://github.com/silenozlt')
