@@ -30,8 +30,9 @@ def main():
             st.markdown('Conhecendo as colunas do dataset :')
             st.write(df.columns)
 
-    if st.sidebar.button('Like'):
-        st.write('Obrigado pela visita')
+    if st.sidebar.button('Contatos'):
+        st.write('GitHub: https://github.com/silenozlt')
+        st.write(('linkedin : https://www.linkedin.com/in/cassio-placido-4a950261/'))
     #else:
     #   st.sidebar.warning('This is a warning')
 
