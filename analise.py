@@ -17,8 +17,6 @@ def main():
         # st.dataframe(df.head(slider))
         # st.markdown('Dados apresenteados formato tabela')
         st.table(df.head(slider))
-        st.markdown('Conhecendo as colunas do dataset :')
-        st.write(df.columns)
 
 
         # AQUI TUDO QUE FOR FICAR DENTRO DO SIDEBAR
@@ -27,8 +25,10 @@ def main():
         if linhas is not False:
             st.markdown('Quantidade de linhas: ')
             st.write(len(df))
-
-
+        colunas = st.sidebar.checkbox('Colunas : ')
+        if colunas is not False:
+            st.markdown('Conhecendo as colunas do dataset :')
+            st.write(df.columns)
 
     if st.sidebar.button('Like'):
         st.write('Obrigado pela visita')
