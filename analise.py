@@ -41,11 +41,11 @@ def main():
             st.markdown('Describe :')
             st.write(df.describe())
 
-        desvio_padrao = st.sidebar.checkbox('Descrição de variaveis')
-        if desvio_padrao is not False:
-            st.markdown('Describe :')
-            selecao = st.multiselect('Selecione a(s) variaveis : ', list(df.columns))
-            st.write(df[selecao].describe())
+        #desvio_padrao = st.sidebar.checkbox('Descrição de variaveis')
+        #if desvio_padrao is not False:
+        #    st.markdown('Describe :')
+        #    selecao = st.multiselect('Selecione a(s) variaveis : ', list(df.columns))
+        #    st.write(df[selecao].describe())
 
 
     if st.sidebar.button('Contatos'):
