@@ -25,10 +25,12 @@ def main():
         if linhas is not False:
             st.markdown('Quantidade de linhas: ')
             st.write(len(df))
+
         colunas = st.sidebar.checkbox('Colunas : ')
         if colunas is not False:
             st.markdown('Conhecendo as colunas do Dataset :')
             st.write(df.columns)
+
         tips_var = st.sidebar.checkbox('Tipo de variaveis no Dataset')
         if tips_var is not False:
             st.markdown('Tipos de variaveis :')
@@ -39,12 +41,11 @@ def main():
             st.markdown('Describe :')
             st.write(df.describe())
 
-
-        #desvio_padrao = st.sidebar.checkbox('Verificando desvio padrão :')
-        #if desvio_padrao is not False:
-        #    st.markdown('Verificando o desvio padrão :')
-        #    selecao = st.multiselect('Selecione a variavel para verificar o desvio padrão', list(df.columns))
-        #    st.write(df[selecao].std())
+        desvio_padrao = st.sidebar.checkbox('Descrição de variaveis :')
+        if desvio_padrao is not False:
+            st.markdown('Descrive :')
+            selecao = st.multiselect('Selecione a(s) variaveis : ', list(df.columns))
+            st.write(df[selecao].describe())
 
 
     if st.sidebar.button('Contatos'):
