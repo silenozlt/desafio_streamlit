@@ -26,9 +26,9 @@ def main():
 
 
     if st.sidebar.button('Like'):
-        st.sidebar.write('Obrigado pela visita')
-    else:
-        st.sidebar.warning('This is a warning')
+        st.write('Obrigado pela visita')
+    #else:
+    #   st.sidebar.warning('This is a warning')
 
 
 if __name__ == '__main__':
