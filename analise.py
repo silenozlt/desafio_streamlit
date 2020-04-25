@@ -44,10 +44,9 @@ def main():
         desvio_padrao = st.sidebar.checkbox('Descrição de variaveis')
         if desvio_padrao is not False:
             st.markdown('Describe :')
-            selecao = st.multiselect('Selecione a(s) variaveis : ', list(df.columns))
+            selecao = st.multiselect('Selecione a(s) variaveis : ', list(df.columns), default=str(df.columns[1]))
             st.write(df[selecao].describe())
-        else:
-            st.text(' ')
+
 
 
     if st.sidebar.button('Contatos'):
