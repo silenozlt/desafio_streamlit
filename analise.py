@@ -33,6 +33,13 @@ def main():
         if tips_var is not False:
             st.markdown('Tipos de variaveis :')
             st.write(df.dtypes)
+        desvio_padrao = st.sidebar.checkbox('Verificando desvio padrão :')
+        if desvio_padrao is not False:
+            st.markdown('Verificando o desvio padrão :')
+            selecao = st.multiselect('Selecione a variavel para verificar o desvio padrão', list(df.columns))
+            st.write(df[selecao].std())
+
+
 
     if st.sidebar.button('Contatos'):
         st.write('GitHub: https://github.com/silenozlt')
