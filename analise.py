@@ -25,10 +25,10 @@ def main():
 
 
 
-    if st.button('Like'):
-        st.write('Obrigado pela visita')
+    if st.sidebar.button('Like'):
+        st.sidebar.write('Obrigado pela visita')
     else:
-        st.warning('This is a warning')
+        st.sidebar.warning('This is a warning')
 
 
 if __name__ == '__main__':
