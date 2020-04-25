@@ -21,7 +21,7 @@ def main():
         st.write(df.columns)
         st.markdown('Verificando a quantidade de linhas :')
         st.write(len(df))
-
+        st.sidebar.subheader('Visualização')
 
 
 
