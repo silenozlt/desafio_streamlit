@@ -29,8 +29,8 @@ def main():
         if colunas is not False:
             st.markdown('Conhecendo as colunas do Dataset :')
             st.write(df.columns)
-        tipo_var = st.sidebar.checkbox('Tipo de variaveis no Dataset')
-        if tipo_var is not False:
+        tips_var = st.sidebar.checkbox('Tipo de variaveis no Dataset')
+        if tips_var is not False:
             st.markdown('Tipos de variaveis :')
             st.write(df.dtypes())
 
