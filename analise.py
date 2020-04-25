@@ -26,7 +26,7 @@ def main():
             st.markdown('Quantidade de linhas: ')
             st.write(len(df))
 
-        colunas = st.sidebar.checkbox('Colunas : ')
+        colunas = st.sidebar.checkbox('Colunas')
         if colunas is not False:
             st.markdown('Conhecendo as colunas do Dataset :')
             st.write(df.columns)
@@ -36,14 +36,14 @@ def main():
             st.markdown('Tipos de variaveis :')
             st.write(df.dtypes)
 
-        descricao = st.sidebar.checkbox('Descrição do dataset :')
+        descricao = st.sidebar.checkbox('Descrição do dataset')
         if descricao is not False:
             st.markdown('Describe :')
             st.write(df.describe())
 
-        desvio_padrao = st.sidebar.checkbox('Descrição de variaveis :')
+        desvio_padrao = st.sidebar.checkbox('Descrição de variaveis')
         if desvio_padrao is not False:
-            st.markdown('Descrive :')
+            st.markdown('Describe :')
             selecao = st.multiselect('Selecione a(s) variaveis : ', list(df.columns))
             st.write(df[selecao].describe())
 
