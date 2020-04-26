@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import base64
-# import matplotlib.pyplot as plt
 import seaborn as sns
 
 
@@ -47,7 +46,7 @@ def main():
             selecao = st.multiselect('Selecione a(s) variaveis : ', list(df.columns), default=str(df.columns[1]))
             st.write(df[selecao].describe())
 
-
+#teste
 
     if st.sidebar.button('Contatos'):
         st.write('GitHub: https://github.com/silenozlt')
